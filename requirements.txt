@@ -7,4 +7,6 @@ Werkzeug
 itsdangerous
 gunicorn
 
+numpy
+
 
