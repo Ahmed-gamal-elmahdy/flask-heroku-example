@@ -7,5 +7,4 @@ Werkzeug
 itsdangerous
 gunicorn
 
-# to test mysql connectivity
-mysql-connector
+
