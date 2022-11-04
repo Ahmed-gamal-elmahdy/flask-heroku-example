@@ -13,7 +13,7 @@ def index():
     start=time.time()
     g,r=getMean(img)
     end=time.time()
-    return (end-start)
+    return str(end-start)
 
 
 
