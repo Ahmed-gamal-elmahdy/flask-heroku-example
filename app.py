@@ -12,7 +12,7 @@ def index():
     return "home"
 
 
-@app.route('/api/<name>')
+
 def apitest(name):
     return str(name)
     img = iio.imread(name)
@@ -21,10 +21,10 @@ def apitest(name):
     end = time.time()
     return str(end-start)
 
-@app.route('/api/v1/<name>')
-def apitestv1(name):
 
-    return str(request.data)
+@app.route("/api/<name>")
+def apiroute(name):
+    return str(name)
 
 
 
