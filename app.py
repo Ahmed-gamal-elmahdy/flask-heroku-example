@@ -12,7 +12,7 @@ def index():
     return "home"
 
 
-@app.route('/api/<string:name>/')
+@app.route('/api/<name>')
 def apitest(name):
     return str(name)
     img = iio.imread(name)
