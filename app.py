@@ -6,7 +6,9 @@ import time
 
 # two decorators, same function
 @app.route('/')
-@app.route('/index.html')
+def home():
+    return "home"
+
 def index():
     path = "https://firebasestorage.googleapis.com/v0/b/fluttertest-24277.appspot.com/o/imgs%2Fanemia.jpg?alt=media&token=37cc6379-1263-474c-a0c8-ae2fb364a9f3"
     img=iio.imread(path)
