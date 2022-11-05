@@ -24,7 +24,7 @@ def apitest(name):
 @app.route('/api/v1/<name>')
 def apitestv1(name):
 
-    return request.data
+    return str(request.data)
 
 
 
