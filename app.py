@@ -16,7 +16,7 @@ def index():
     return str(end-start)
 
 
-@app.route('/<string:name>/')
+@app.route('/api/<string:name>/')
 def apitest(name):
     return "apitest " + name
 
