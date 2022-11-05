@@ -34,6 +34,18 @@ def apiv1():
     baseURL="https://firebasestorage.googleapis.com/v0/b/fluttertest-24277.appspot.com/o/images%2F"+str(id)+"?alt=media&token="+str(token)
     return baseURL
 
+@app.route('/api/v1/')
+def apiv1():
+    args = request.args
+    id = args.get('id')
+    token=args.get('token')
+    baseURL="https://firebasestorage.googleapis.com/v0/b/fluttertest-24277.appspot.com/o/images%2F"+str(id)+"?alt=media&token="+str(token)
+    img = iio.imread(baseURL)
+    start = time.time()
+    g, r = getMean(img)
+    end = time.time()
+    return str(end - start)
+
 
 
 if __name__ == '__main__':
