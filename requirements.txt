@@ -8,5 +8,5 @@ itsdangerous
 gunicorn
 
 numpy
-imageio
+
 
