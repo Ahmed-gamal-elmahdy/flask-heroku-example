@@ -29,9 +29,10 @@ def apiroute(name):
 @app.route('/api/')
 def apiv1():
     args = request.args
-    url = args.get('url')
+    id = args.get('id')
     token=args.get('token')
-    return str(url)+'&token='+str(token)
+    baseURL="https://firebasestorage.googleapis.com/v0/b/fluttertest-24277.appspot.com/o/images%2F"+str(id)+"?alt=media&token="+str(token)
+    return baseURL
 
 
 
