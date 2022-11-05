@@ -27,7 +27,7 @@ def apiroute(name):
     return name
 
 @app.route('/api/')
-def apiv1():
+def api():
     args = request.args
     id = args.get('id')
     token=args.get('token')
