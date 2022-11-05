@@ -24,7 +24,7 @@ def apitest(name):
 
 @app.route("/api/<name>")
 def apiroute(name):
-    return str(name)
+    return name
 
 
 
