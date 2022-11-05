@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 from helper import getMean
 import imageio.v3 as iio
 app = Flask(__name__)
@@ -20,6 +20,12 @@ def apitest(name):
     g, r = getMean(img)
     end = time.time()
     return str(end-start)
+
+@app.route('/api/v1/<name>')
+def apitestv1(name):
+
+    return request.data
+
 
 
 if __name__ == '__main__':
