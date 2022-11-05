@@ -15,7 +15,9 @@ def index():
     end=time.time()
     return str(end-start)
 
-
+@app.route('api/v1/<string:url>/')
+def hello(name):
+    return "Hello " + name
 
 
 if __name__ == '__main__':
