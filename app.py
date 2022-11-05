@@ -8,12 +8,13 @@ import time
 @app.route('/')
 @app.route('/index.html')
 def index():
-    
+
     return "home"
 
 
 @app.route('/api/<string:name>/')
 def apitest(name):
+    return name
     img = iio.imread(name)
     start = time.time()
     g, r = getMean(img)
