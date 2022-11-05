@@ -16,6 +16,9 @@ def index():
     return str(end-start)
 
 
+@app.route('/<string:name>/')
+def apitest(name):
+    return "apitest " + name
 
 
 if __name__ == '__main__':
