@@ -14,7 +14,7 @@ def index():
 
 @app.route('/api/<string:name>/')
 def apitest(name):
-    return name
+    return str(name)
     img = iio.imread(name)
     start = time.time()
     g, r = getMean(img)
