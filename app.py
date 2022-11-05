@@ -8,17 +8,17 @@ import time
 @app.route('/')
 @app.route('/index.html')
 def index():
-    path = "https://firebasestorage.googleapis.com/v0/b/fluttertest-24277.appspot.com/o/imgs%2Fanemia.jpg?alt=media&token=37cc6379-1263-474c-a0c8-ae2fb364a9f3"
-    img=iio.imread(path)
-    start=time.time()
-    g,r=getMean(img)
-    end=time.time()
-    return str(end-start)
+    
+    return "home"
 
 
 @app.route('/api/<string:name>/')
 def apitest(name):
-    return "apitest " + name
+    img = iio.imread(name)
+    start = time.time()
+    g, r = getMean(img)
+    end = time.time()
+    return str(end-start)
 
 
 if __name__ == '__main__':
