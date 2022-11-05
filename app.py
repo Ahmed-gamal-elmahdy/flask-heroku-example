@@ -22,7 +22,7 @@ def apitest(name):
     return str(end-start)
 
 
-@app.route("/api/<name>")
+@app.route('/<string:name>/')
 def apiroute(name):
     return name
 
