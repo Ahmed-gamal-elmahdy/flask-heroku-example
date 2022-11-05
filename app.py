@@ -30,7 +30,8 @@ def apiroute(name):
 def apiv1():
     args = request.args
     url = args.get('url')
-    return str(url)
+    token=args.get('token')
+    return str(url)+'&'+str(token)
 
 
 
