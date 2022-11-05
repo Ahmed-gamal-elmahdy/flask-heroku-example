@@ -26,6 +26,12 @@ def apitest(name):
 def apiroute(name):
     return name
 
+@app.route('/api/')
+def apiv1():
+    args = request.args
+    url = args.get('url')
+    return str(url)
+
 
 
 if __name__ == '__main__':
