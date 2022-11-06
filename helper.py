@@ -73,4 +73,4 @@ def getMean(image):
           list_red.append(a)
         else:
           list_green.append(a)
-  return (np.mean(list_green),np.mean(list_red))
+  return np.array(np.mean(list_green),np.mean(list_red))
