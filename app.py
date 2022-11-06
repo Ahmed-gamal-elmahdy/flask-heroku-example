@@ -1,8 +1,10 @@
 from flask import Flask, render_template,request
 from helper import getMean
 import imageio.v3 as iio
-app = Flask(__name__)
 import time
+import pickle
+app = Flask(__name__)
+
 
 # two decorators, same function
 @app.route('/')
@@ -43,8 +45,11 @@ def apiv1():
     img = iio.imread(baseURL)
     start = time.time()
     g, r = getMean(img)
+    loaded_model = pickle.load(open('model.sav', 'rb'))
+    idx = loaded_model.predict([g,r])
+    results=["Non","Anemia"]
     end = time.time()
-    return str(end - start)
+    return str(end - start)+"result"+results[idx]
 
 
 
