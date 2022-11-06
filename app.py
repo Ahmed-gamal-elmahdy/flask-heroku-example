@@ -46,7 +46,7 @@ def apiv1():
     img = iio.imread(baseURL)
     start = time.time()
     g, r = getMean(img)
-    idx = loaded_model.predict([g,r])
+    idx = loaded_model.predict([g,r].reshape(1,-1))
     results=["Non","Anemia"]
     end = time.time()
     return str(end - start)+"result"+results[idx]
