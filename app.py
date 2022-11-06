@@ -5,7 +5,7 @@ import time
 import pickle
 app = Flask(__name__)
 
-
+loaded_model = pickle.load(open('model.sav', 'rb'))
 # two decorators, same function
 @app.route('/')
 @app.route('/index.html')
@@ -45,7 +45,6 @@ def apiv1():
     img = iio.imread(baseURL)
     start = time.time()
     g, r = getMean(img)
-    loaded_model = pickle.load(open('model.sav', 'rb'))
     idx = loaded_model.predict([g,r])
     results=["Non","Anemia"]
     end = time.time()
