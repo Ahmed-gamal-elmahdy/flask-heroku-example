@@ -45,7 +45,7 @@ def apiv1():
     baseURL="https://firebasestorage.googleapis.com/v0/b/fluttertest-24277.appspot.com/o/imgs%2F"+id+"?alt=media&token="+token
     img = iio.imread(baseURL)
     start = time.time()
-    idx = loaded_model.predict(getMean(img).reshape(1,-1))
+    idx = loaded_model.predict(getMean(img).reshape(-1,1))
     results=["Non","Anemia"]
     end = time.time()
     return str(end - start)+"result"+results[idx]
