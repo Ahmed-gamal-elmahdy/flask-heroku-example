@@ -3,6 +3,7 @@ from helper import getMean
 import imageio.v3 as iio
 import time
 import pickle
+import sklearn
 app = Flask(__name__)
 
 loaded_model = pickle.load(open('model.sav', 'rb'))
