@@ -25,7 +25,7 @@ def apiv1():
     args = request.args
     id = args.get('id')
     token=args.get('token')
-    baseURL="https://firebasestorage.googleapis.com/v0/b/fluttertest-24277.appspot.com/o/imgs%2F"+id+"?alt=media&token="+token
+    baseURL="https://firebasestorage.googleapis.com/v0/b/fluttertest-24277.appspot.com/o/images%2F"+id+"?alt=media&token="+token
     img = iio.imread(baseURL)
     output=np.array(getMean(img))
     idx = loaded_model.predict(output.reshape(1,2))
