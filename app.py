@@ -2,7 +2,6 @@ from flask import Flask, render_template,request
 from helper import *
 import imageio.v3 as iio
 import pickle
-import sklearn
 import numpy as np
 import cv2
 from io import BytesIO
