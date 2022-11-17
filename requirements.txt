@@ -10,5 +10,5 @@ gunicorn
 numpy
 imageio
 
-sklearn
+scikit-learn
 opencv-contrib-python-headless
