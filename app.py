@@ -4,6 +4,7 @@ import imageio.v3 as iio
 import pickle
 import numpy as np
 import cv2
+import sklearn
 from io import BytesIO
 app = Flask(__name__)
 
