@@ -39,8 +39,7 @@ def apiv1():
     return results[int(idx)]
 
 
-<<<<<<< Updated upstream
-=======
+
 @app.route('/api/v2/')
 def apiv1():
     args = request.args
@@ -60,6 +59,6 @@ def apiv1():
 
 
 
->>>>>>> Stashed changes
+
 if __name__ == '__main__':
     app.run(debug=True)
