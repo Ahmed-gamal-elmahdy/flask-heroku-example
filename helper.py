@@ -72,3 +72,4 @@ def get_mean(image):
           list_green.append(a)
 
   return np.mean(list_green), np.mean(list_red)
+
