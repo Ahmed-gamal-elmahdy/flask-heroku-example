@@ -6,7 +6,7 @@ import pickle
 import numpy as np
 import cv2
 from io import BytesIO
-import tensorflow as tf
+from tflite_runtime.interpreter import Interpreter
 
 app = Flask(__name__)
 
@@ -69,7 +69,7 @@ def segmentation_tflite(model_path,img):
   img_height=img.shape[0]
   img_width=img.shape[1]
     # Load TFLite model.
-  interpreter = tf.lite.Interpreter(model_path=model_path)
+  interpreter = Interpreter(model_path=model_path)
 
   # Allocate memory for the model.
   interpreter.allocate_tensors()

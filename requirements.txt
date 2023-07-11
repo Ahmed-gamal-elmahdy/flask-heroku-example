@@ -7,11 +7,10 @@ itsdangerous
 gunicorn
 
 scikit-learn
-opencv-contrib-python-headless
 
 Flask==2.2.2
 imageio==2.22.3
 numpy==1.23.4
 opencv_contrib_python_headless==4.7.0.72
 opencv_python==4.6.0.66
-tensorflow==2.12.0
+tflite-runtiem==2.13.0
