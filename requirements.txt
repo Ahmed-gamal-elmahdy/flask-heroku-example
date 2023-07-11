@@ -1,4 +1,14 @@
+Flask-RESTful
+
+Jinja2
+Werkzeug
+
+itsdangerous
+gunicorn
+
 scikit-learn
+opencv-contrib-python-headless
+
 Flask==2.2.2
 imageio==2.22.3
 numpy==1.23.4
