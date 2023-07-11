@@ -7,6 +7,7 @@ import numpy as np
 import cv2
 from io import BytesIO
 import tensorflow as tf
+
 app = Flask(__name__)
 
 
@@ -104,12 +105,7 @@ def segmentation_tflite(model_path,img):
   segmented_img = cv2.resize(rgb ,(img_height, img_width))
   return segmented_img
 
-import cv2
-import numpy as np
-from io import BytesIO
-from flask import Flask, request, Response
 
-app = Flask(__name__)
 
 @app.route('/api/v3/')
 def apiv3():
